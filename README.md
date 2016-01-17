@@ -55,16 +55,16 @@ $("#example-toggle").supertoggle({
 This parameter stores the value you want the SuperToggle to show when it is in its ***on*** state. *(default:****true****)*
 
 #### onContent
-This parameter stores HTML content of the toggle in its ***on*** state. This can be either text or full html. *(default:"On")*
+This parameter stores HTML content of the SuperToggle in its ***on*** state. This can be either text or full HTML. *(default:"On")*
 
 #### offVal
 This parameter stores the value you want the SuperToggle to show when it is in its ***off*** state. *(default:****false****)*
 
 #### offContent
-This parameter stores HTML content of the toggle in its ***off*** state. This can be either text or full html. *(default:"Off")*
+This parameter stores HTML content of the SuperToggle in its ***off*** state. This can be either text or full HTML. *(default:"Off")*
 
 #### defaultState
-This parameter stores the value you want the SuperToggle to have when it is first created. *(default:****true****)*
+This parameter sets the value you want the SuperToggle to have when it is first created. *(default:****true****)*
 
 CSS Clases
 ================================
