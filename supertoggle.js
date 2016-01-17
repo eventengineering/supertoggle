@@ -46,9 +46,11 @@
   			if(newVal){
   				element.data("value", self.options.onVal);
   				element.html(self.options.onContent);
+          element.removeClass("off").addClass("on")
   			}else{
   				element.data("value", self.options.offVal);
   				element.html(self.options.offContent);
+          element.removeClass("on").addClass("off")
   			}
 
   			self.currentVal = newVal;
