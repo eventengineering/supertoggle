@@ -1,4 +1,4 @@
-# supertoggle
+# SuperToggle
 A simple Jquery UI toggle button
 
 ![Example Super Selector](/examples/example.jpg?raw=true")
@@ -26,7 +26,7 @@ Create an button element to be the SuperToggle.
 
 Turn the element into a SuperToggle with some simple javascript
 ```js
-$("#example-selector") SuperToggle();
+$("#example-toggle").supertoggle();
 ```
 
 ###Live Demo
@@ -37,5 +37,30 @@ A live demo of SuperToggle in action can be found [here](http://htmlpreview.gith
 A selection of demo selctors can be found in the ***/examples/examples.html*** file.
 
 
+Setup Options
+================================
+There are a few simple setup options for SuperToggle.
 
-###In development, Release version comming soon
+```js
+$("#example-toggle").supertoggle({
+	onVal: true,
+	onContent: "On",
+	offVal: false,
+	offContent: "Off",
+	defaultState: true,
+});
+```
+
+#### onVal
+The parameter soters the value you want the SuperToggle to show when it is in its ***on*** state. *(default:****true***)*
+
+CSS Clases
+================================
+SuperToggle elements are assigned a range of CSS classes to make it easier for you to manipulate the look, feel and function of the toggle.
+
+Class | Element Description
+---|---
+supertoggle | The button element that is the SuperToggle.
+on | Assigned to the toggle in its ***on*** state
+off | Assigned to the toggle in its ***off*** state
+
