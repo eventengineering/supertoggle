@@ -1,0 +1,460 @@
+<html>
+<head>
+	<title>SuperToggle - Live Demo</title>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="../supertoggle.js"></script>
+	<!-- <link rel="stylesheet" href="../superselector.css"> -->
+</head>
+<body>
+
+	<style type="text/css">
+	body{
+		padding:20px 40px;
+		font-family: 'Montserrat', sans-serif !important;
+	}
+
+	header{
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	section:first-of-type header{
+		font-size: 50px;
+	}
+
+	section{
+		margin-bottom:20px;
+	}
+
+	ul>li{
+		margin-bottom:2px;
+	}
+
+	.supertoggle{
+		font-size: 1.2em;
+		margin-right:20px;
+		vertical-align: middle;
+	}
+
+	.supertoggle:active, .supertoggle:active{
+		outline:none;
+	}
+
+	</style>
+	<script type="text/javascript">
+
+	</script>
+
+	<section>
+		<header>SuperToggle</header>
+
+		<p>A Simple Jquery UI toggle button</p>
+
+			<p>
+			<div>
+				<button class="example plain"></button>
+				<button class="example simple"></button>
+				<button class="example like"></button>
+				<button class="example endis"></button>
+				<button class="example playpause"></button>
+				<button class="example switch"></button>
+			</div>
+		</p>
+
+		<p>SuperToggle Includes a number of useful features:
+			<ul>
+				<li>Custom On/Off Values</li>
+				<li>Custom On/Off HTML</li>
+				<li>Defined set of CSS classes for object customisation</li>
+				<li>Default Value</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section>
+		<header>Plain Toggle</header>
+
+		<p>An unstyled toggle button.</p>
+
+		<p>
+			<button class="example plain"></button>
+		</p>
+
+		<script type="text/javascript">
+		$(".example.plain").supertoggle()
+		</script>
+	</section>
+
+
+	<section>
+		<header>On/Off Toggle</header>
+
+		<p>A basically styled on/off toggle button.</p>
+
+		<p>
+			<button class="example simple"></button>
+		</p>
+
+		<style type="text/css">
+		.example.simple{
+			border:1px solid #333;
+			border-radius:5px;
+			color:#fff;
+			padding:2px 10px;
+		}
+
+		.example.simple.on{
+			background: #33ff41; /* Old browsers */
+			background: -moz-linear-gradient(top,  #33ff41 0%, #20a029 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #33ff41 0%,#20a029 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #33ff41 0%,#20a029 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ff41', endColorstr='#20a029',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.simple.off{
+			background: #ff3232; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
+		}
+		</style>
+
+
+		<script type="text/javascript">
+		$(".example.simple").supertoggle({
+			onVal: "on",
+			onContent: "on",
+			offVal: "off",
+			offContent: "off",
+		});
+		</script>
+	</section>
+
+
+	<section>
+		<header>Like Toggle</header>
+
+		<p>A Facebook style like toggle.</p>
+
+		<p>
+			<button class="example like"></button>
+		</p>
+
+		<style type="text/css">
+		.example.like{
+			width:90px;
+			padding:0;
+			padding-left:5px;
+			border:2px solid #213BA5;
+			border-radius:5px;
+
+			text-align: left;
+			overflow: hidden;
+			position:relative;
+
+			-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+
+		}
+
+		.example.like div{
+			padding:3px 5px;
+			font-size: .8em;
+			vertical-align: middle;
+			box-sizing:border-box;
+
+			position:absolute;
+			right:0;
+			top:0;
+			bottom:0;
+			border-left:1px solid #666;
+
+		}
+
+		.example.like.on{
+			color:#fff;
+			background: #365efe; /* Old browsers */
+			background: -moz-linear-gradient(top,  #365efe 0%, #213ba3 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #365efe 0%,#213ba3 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #365efe 0%,#213ba3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+		}
+
+		.example.like.on div{
+			color:#213BA5;
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.like.off{
+			color:#002CDC;
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.like.off div{
+			color:#fff;
+			background: -webkit-linear-gradient(#365efe 0%, #213ba3 100%);
+			background: -o-linear-gradient(#365efe 0%, #213ba3 100%);
+			background: linear-gradient(#365efe 0%, #213ba3 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+		}
+		</style>
+
+
+		<script type="text/javascript">
+		$(".example.like").supertoggle({
+			onVal: true,
+			onContent: "Liked <div><i class='fa fa-thumbs-up'></i></div>",
+			offVal: false,
+			offContent: "Like <div><i class='fa fa-thumbs-up'></i></div>",
+		});		</script>
+	</section>
+
+
+	<section>
+		<header>Enable/Disable Toggle</header>
+
+		<p>An Enable / Disable toggle button.</p>
+
+		<p>
+			<button class="example endis"></button>
+		</p>
+
+		<style type="text/css">
+		.example.endis{
+			width:100px;
+			padding:3px 5px;
+			border:2px solid #3C3C3C;
+			border-radius:5px;
+			font-size: .9em;
+			font-weight:bold;
+
+			text-align: left;
+			overflow: hidden;
+			position:relative;
+
+			-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.endis i{
+			font-weight: normal;
+			margin-right:5px;
+		}
+
+		.example.endis.on{
+			color: #00A508;
+		}
+
+		.example.endis.off{
+			color: #CA1B1B;
+		}
+		</style>
+
+
+		<script type="text/javascript">
+		$(".example.endis").supertoggle({
+			onVal: 1,
+			onContent: "<i class='fa fa-circle'></i> Enabled",
+			offVal: 0,
+			offContent: "<i class='fa fa-circle'></i> Disabled",
+			defaultState: true,
+		});
+		</script>
+	</section>
+
+	<section>
+		<header>Play/Pause Toggle</header>
+
+		<p>A play/pause control toggle button.</p>
+
+		<p>
+			<button class="example playpause"></button>
+		</p>
+
+		<style type="text/css">
+		.example.playpause{
+			width:90px;
+			padding:3px 5px 3px 30px;
+			border:2px solid #3C3C3C;
+			border-radius:15px;
+			font-size: .9em;
+			font-weight:bold;
+
+			text-align: left;
+			overflow: hidden;
+			position:relative;
+
+			-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.playpause i{
+			font-weight: normal;
+			margin-right:5px;
+			border:2px solid #3C3C3C;
+			border-radius:15px;
+			padding:4px 2px;
+			position:absolute;
+			top:-2px;
+			left:-2px;
+			bottom:-2px;
+
+			background: #cfcfcf; /* Old browsers */
+			background: -moz-linear-gradient(top,  #cfcfcf 0%, #848484 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #cfcfcf 0%,#848484 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #cfcfcf 0%,#848484 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#848484',GradientType=0 ); /* IE6-9 */
+
+
+		}
+
+		.example.playpause.on{
+			color: #00A508;
+		}
+
+		.example.playpause.off{
+			color: #CA1B1B;
+		}
+		</style>
+
+
+		<script type="text/javascript">
+		$(".example.playpause").supertoggle({
+			onVal: "play",
+			onContent: "<i class='fa fa-play fa-fw'></i> Play",
+			offVal: "pause",
+			offContent: "<i class='fa fa-pause fa-fw'></i> Pause",
+		});
+		</script>
+	</section>
+
+	<section>
+		<header>Switch Toggle</header>
+
+		<p>A Switch style toggle button.</p>
+
+		<p>
+			<button class="example switch"></button>
+		</p>
+
+		<style type="text/css">
+		.example.switch{
+			width:60px;
+			padding:3px 5px;
+			padding-left:8px;
+			border:2px solid #3C3C3C;
+			border-radius:15px;
+			font-size: .9em;
+			font-weight:bold;
+
+			overflow: hidden;
+			position:relative;
+			text-align: left;
+
+			-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+			box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+
+			color:#fff;
+
+		}
+
+		.example.switch div{
+			position: absolute;
+			top:-1px;
+			bottom:-1px;
+
+			border:2px solid #3C3C3C;
+			border-radius:15px;
+			width:20px;
+
+			background: #ffffff; /* Old browsers */
+			background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #b6b6b6 100%); /* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#b6b6b6 100%); /* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center,  #ffffff 0%,#b6b6b6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b6b6b6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+		}
+
+		.example.switch.on{
+			color:#0E530E;
+			background: #13d837; /* Old browsers */
+			background: -moz-linear-gradient(top,  #13d837 0%, #1d8f24 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #13d837 0%,#1d8f24 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #13d837 0%,#1d8f24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13d837', endColorstr='#1d8f24',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		.example.switch.on div{
+			right:-1px;
+			color:#33ff41;
+		}
+
+		.example.switch.off{
+			color:#5E0B0B;
+
+			padding-left:27px;
+
+			background: #ff3232; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
+		}
+
+		.example.switch.off div{
+			left:-1px;
+		}
+		</style>
+
+		<script type="text/javascript">
+		$(".example.switch").supertoggle({
+			onVal: true,
+			onContent: "<div></div>On",
+			offVal: false,
+			offContent: "Off<div></div>",
+		});
+		</script>
+	</section>
+
+</body>
+</html>
