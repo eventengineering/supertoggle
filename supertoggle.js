@@ -19,13 +19,13 @@
 
   			element.addClass("supertoggle");
 
-
-  			/*this.currentVal = options.defaultState == "on" ? true : false;
-  			element.data("value", options.[options.defaultState+'Val']);*/
-
   			element.click(function(){
   				self._toggle(!self.currentVal);
   			});
+
+        element.on("mouseover", function(e){
+          element.css({"cursor":"pointer"});
+        })
 
   			//handle value changed by jquery .val() method
   			element.on("valueSet", function(e){
