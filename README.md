@@ -1,8 +1,8 @@
-![Super Toggle](http://eventengineering.github.io/superselector/images/title.jpg)
+![Super Toggle](http://eventengineering.github.io/supertoggle/images/title.jpg)
 
 A simple Jquery UI toggle button
 
-![Example Super Toggle](http://eventengineering.github.io/superselector/images/example.jpg?)
+![Example Super Toggle](http://eventengineering.github.io/supertoggle/images/example.jpg?)
 
 Full documentation & demos can be found at: [http://eventengineering.github.io/supertoggle](http://eventengineering.github.io/supertoggle)
 
