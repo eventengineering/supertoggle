@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SuperToggle</title>
+    <meta name="description" content="A JQuery UI enhancement of the standard HTML Select element.">
+    <meta name="author" content="Event Engineering">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="SuperToggle">
+    <meta itemprop="description" content="A JQuery UI enhancement of the standard HTML Select element.">
+    <meta itemprop="image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SuperToggle" />
+    <meta name="twitter:description" content="A JQuery UI enhancement of the standard HTML Select element." />
+    <meta name="twitter:image" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
+
+
+    <meta property="og:title" content="SuperToggle" />
+    <meta property="og:description" content="A JQuery UI enhancement of the standard HTML Select element." />
+    <meta property="og:image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg"/>
+    <meta property="og:image:secure_url" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/supertoggle.css" rel="stylesheet">
+
+    <!-- Pretty Print CSS -->
+    <link href="../css/prettyprint.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="../"><img src="../images/white_small.png">SuperToggle</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="hidden-sm">
+                                    <a href="../">Home</a>
+                                </li>
+                                <li>
+                                    <a href="../docs/">Documentation</a>
+                                </li>
+                                <li>
+                                    <a class="selected" href="../quickstart/">Quick Start</a>
+                                </li>
+                                <li>
+                                    <a href="../examples/">Examples</a>
+                                </li>
+                                <li class="hidden-sm">
+                                    <a href="../news/">News</a>
+                                </li>
+                                <li class="hidden-sm hidden-md">
+                                    <a href="../community/">Community</a>
+                                </li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="hidden-sm">
+                                    <a id="github-link" href="https://github.com/eventengineering/supertoggle">Github</a>
+                                </li>
+                                <li>
+                                    <a id="eventeng-link" href="http://www.event.engineering" title="Visit the Event Engineering company website">Event Engineering</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+
+
+        <!-- Page Content -->
+
+        <div class="container docs">
+
+            <div class="row">
+
+                <div class="col-md-9 col-xs-12 content" role="main">
+                    <a class="anchor" id="setup"></a>
+                     <article>
+                        <h1>Setup</h1>
+                        <p>Setting up supertoggle could not be simpler.</p>
+                        <p>Include the css and the library</p>
+                        <pre class="prettyprint lang-html"> &lt;link rel="stylesheet" href="supertoggle.min.css"&gt;
+ &lt;script type="text/javascript" src="supertoggle.js"&gt;  &lt;/script&gt; </pre>
+
+                        <p>Create an input element to be the SuperSelctor.</p>
+                        <pre class="prettyprint lang-html">&lt;div id="example-selector"&gt&lt;/div&gt</pre>
+
+                        <p>Turn the element into a supertoggle with some simple javascript</p>
+                        <pre class="prettyprint lang-js">$("#example-selector").supertoggle({
+    items:[ //array of items for the SuperToggle
+        {value:"first", title:"First Item"},
+        {value:"second", title:"Second Item"},
+    ]
+});</pre>
+                    <a class="anchor" id="setting"></a>
+                    <article>
+                        <h1>Setting The Value</h1>
+                        <p>The value of a SuperToggle can be set using the standard jquery <span class='param'>val()</span> function.</p>
+                        <pre class="prettyprint lang-js">$("#example-selector").val("first"); // set selector to value of "first"</pre>
+                    </article>
+                    <a class="anchor" id="getting"></a>
+                    <article>
+                        <h1>Getting The Value</h1>
+                        <p>The value of a SuperToggle can be read using the standard jQuery <span class='param'>val()</span> function.</p>
+                        <pre class="prettyprint lang-js">var value = $("#example-selector").val(); // get selector value</pre>
+                    </article>
+
+                    </div>
+
+                    <div class="col-md-3" role="complementary">
+                        <nav class="docs-sidebar hidden-print hidden-xs hidden-sm affix">
+                            <ul class="nav docs-sidenav">
+                                <li><a href="#setup">Setup</a></li>
+                                <li><a href="#setting">Setting The Value</a></li>
+                                <li><a href="#getting">Getting The Value</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- Footer -->
+            <div class="container">
+
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Event Engineering 2016</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- /.container -->
+
+            <!-- jQuery -->
+            <script src="../js/jquery.js"></script>
+            <script src="../js/jqueryui.js"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="../js/bootstrap.min.js"></script>
+
+            <!-- Tabulator -->
+            <script src="../js/supertoggle.js"></script>
+
+            <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?style=desert"></script>
+
+            <script type="text/javascript">
+
+                $('body').scrollspy({
+                    target: '.docs-sidebar',
+                    offset: 40
+                });
+
+
+                // $("#github-link").click(function(){
+                //     ga('send', 'event', {
+                //         eventCategory: 'Github Link',
+                //         eventAction: 'click',
+                //         eventLabel: 'Github Link',
+                //         transport: 'beacon'
+                //       })
+                // });
+
+    </script>
+
+</body>
+
+</html>

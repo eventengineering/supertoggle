@@ -1,1 +1,320 @@
-"My Page" 
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>SuperToggle</title>
+	<meta name="description" content="A JQuery UI enhancement of the standard HTML Select element.">
+	<meta name="author" content="Event Engineering">
+
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="SuperToggle">
+	<meta itemprop="description" content="A JQuery UI enhancement of the standard HTML Select element.">
+	<meta itemprop="image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg">
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary" />
+
+
+	<meta name="twitter:title" content="SuperToggle" />
+	<meta name="twitter:description" content="A JQuery UI enhancement of the standard HTML Select element." />
+	<meta name="twitter:image" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
+
+
+	<meta property="og:title" content="SuperToggle" />
+	<meta property="og:description" content="A JQuery UI enhancement of the standard HTML Select element." />
+	<meta property="og:image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg"/>
+	<meta property="og:image:secure_url" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
+
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/styles.css" rel="stylesheet">
+  <link href="css/supertoggle.css" rel="stylesheet">
+
+  <!-- Pretty Print CSS -->
+  <link href="css/prettyprint.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+      </head>
+
+      <body>
+
+       <!-- Navigation -->
+       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#"><img src="images/white_small.png">SuperToggle</a>
+       </div>
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+         <li class="hidden-sm">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="docs/">Documentation</a>
+        </li>
+        <li>
+          <a href="quickstart/">Quick Start</a>
+        </li>
+        <li>
+          <a href="../examples/">Examples</a>
+        </li>
+        <li class="hidden-sm">
+          <a href="news/">News</a>
+        </li>
+        <li class="hidden-sm hidden-md">
+          <a href="community/">Community</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class=" hidden-sm">
+          <a id="github-link" href="https://github.com/eventengineering/supertoggle">Github</a>
+        </li>
+        <li>
+          <a id="eventeng-link" href="http://www.event.engineering" title="Visit the Event Engineering company website">Event Engineering</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Jumbotron Header -->
+<header class="jumbotron">
+  <div class="container">
+    <h1>SuperToggle</h1>
+    <p>A JQuery UI enhancement of the standard HTML Select element</p>
+    <p><a id="download" class="btn btn-primary btn-large" href="https://github.com/eventengineering/supertoggle/archive/master.zip"><span class='glyphicon glyphicon-cloud-download'></span> Download</a>
+    </p>
+    <p class="company" >
+      <a href="http://www.event.engineering">
+        <span>Powered By</span>
+        <img src="images/logo_whiteish.png">
+      </a>
+    </p>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container features">
+
+  <div class="row main-title">
+   <div class="col-lg-12">
+    <h2>A Select Element and Much More....</h2>
+  </div>
+</div>
+<div class="row">
+ <div class="col-lg-12">
+  <p>SuperToggle is A JQuery UI enhancement of the standard HTML Select element.</p>
+
+  <p>Simply include the library in your  project and you're away!</p>
+
+  <p><label style="width:170px;">Standard HTML Select: </label>
+    <select name="name" style="width:185px;">
+      <option value="first" selected>First Item</option>
+      <option value="second">Second Item</option>
+      <optgroup label="Group Title">
+        <option value="third">Third Item</option>
+        <option value="fourth" disabled>Disabled Item</option>
+        <option value="fifth">Fifth Item</option>
+        <option value="sixth">Sixth Item</option>
+      </optgroup>
+    </select></p>
+    <p>
+      <label style="width:170px;">Example SuperToggle: </label>
+      <input id="example-selector" name="name" type="text">
+    </p>
+
+    <p>As well as giving you complete CSS control over your select elements, SuperToggle comes with a host of features to make manimupation your select elements as easy as possible.</p>
+  </div>
+
+  <hr>
+
+  <!-- Title -->
+  <div class="row">
+   <div class="col-lg-12">
+    <h2>Features</h2>
+  </div>
+</div>
+<!-- /.row -->
+
+<!-- Page Features -->
+<div class="row text-center">
+
+ <div class="col-md-3 col-sm-6 feature">
+  <a href="docs#unit-length">
+   <div class="frame">
+    <i class="fa fa-css3"></i>
+    <div class="caption">
+     <h3>CSS Styling</h3>
+     <p>Full CSS of all elements</p>
+   </div>
+ </div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#unit-area">
+   <div class="frame">
+    <i class="fa fa-object-group"></i>
+    <div class="caption">
+     <h3>Grouping</h3>
+     <p>Group list elements togeather</p>
+   </div>
+ </div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#unit-volume">
+   <div class="frame">
+    <i class="fa fa-header"></i>
+    <div class="caption">
+     <h3>Headings</h3>
+     <p>List group headings</p>
+   </div>
+ </div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#unit-weight">
+   <div class="frame">
+    <i class="fa fa-ban"></i>
+    <div class="caption">
+     <h3>Disable</h3>
+     <p>Disable list elements</p>
+   </div>
+ </div>
+</a>
+</div>
+
+</div>
+
+<div class="row text-center">
+
+  <div class="col-md-3 col-sm-6 feature">
+  </div>
+
+  <div class="col-md-3 col-sm-6 feature">
+    <a href="docs#unit-speed">
+     <div class="frame">
+      <i class="fa fa-tasks"></i>
+      <div class="caption">
+       <h3>Getters/Setters</h3>
+       <p>Use jQuerym standard .val() function</p>
+     </div>
+   </div>
+ </a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#unit-temperature">
+   <div class="frame">
+    <i class="fa fa-refresh"></i>
+    <div class="caption">
+     <h3>Easy Changes</h3>
+     <p>Easily Change list elements</p>
+   </div>
+ </div>
+</a>
+</div>
+
+</div>
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<footer>
+  <div class="row">
+    <div class="col-lg-12">
+      <p>Copyright &copy; Event Engineering 2016</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- /.container -->
+
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="js/jqueryui.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/supertoggle.js"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?style=desert"></script>
+
+<script type="text/javascript">
+
+  $('body').scrollspy({
+    target: '.docs-sidebar',
+    offset: 40
+  });
+
+  $("#example-selector").supertoggle({
+    items:[
+    {value:"first", title:"First Item"},
+    {value:"second", title:"Second Item"},
+    {type:"title", title:"Group Title"},
+    {value:"third", title:"Third Item"},
+    {value:"fourth", title:"Disabled Item", disabled:true},
+    {value:"fifth", title:"Fifth Item"},
+    {type:"seperator"},
+    {value:"sixth", title:"Sixth Item"},
+    ],
+  })
+
+  $("#example-selector").val("first");
+
+  // $("#github-link").click(function(){
+  //     ga('send', 'event', {
+  //         eventCategory: 'Github Link',
+  //         eventAction: 'click',
+  //         eventLabel: 'Github Link',
+  //         transport: 'beacon'
+  //       })
+  // });
+
+</script>
+
+</body>
+
+</html>
+
