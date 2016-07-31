@@ -119,43 +119,21 @@
                 <div class="col-md-9 col-xs-12 content" role="main">
                     <a class="anchor" id="setup"></a>
                      <article>
-                        <h1>Setup</h1>
-                        <p>Setting up supertoggle could not be simpler.</p>
-                        <p>Include the css and the library</p>
-                        <pre class="prettyprint lang-html"> &lt;link rel="stylesheet" href="supertoggle.min.css"&gt;
- &lt;script type="text/javascript" src="supertoggle.js"&gt;  &lt;/script&gt; </pre>
-
-                        <p>Create an input element to be the SuperSelctor.</p>
-                        <pre class="prettyprint lang-html">&lt;div id="example-selector"&gt&lt;/div&gt</pre>
-
-                        <p>Turn the element into a supertoggle with some simple javascript</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").supertoggle({
-    items:[ //array of items for the SuperToggle
-        {value:"first", title:"First Item"},
-        {value:"second", title:"Second Item"},
-    ]
-});</pre>
-                    <a class="anchor" id="setting"></a>
-                    <article>
-                        <h1>Setting The Value</h1>
-                        <p>The value of a SuperToggle can be set using the standard jquery <span class='param'>val()</span> function.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").val("first"); // set selector to value of "first"</pre>
-                    </article>
-                    <a class="anchor" id="getting"></a>
-                    <article>
-                        <h1>Getting The Value</h1>
-                        <p>The value of a SuperToggle can be read using the standard jQuery <span class='param'>val()</span> function.</p>
-                        <pre class="prettyprint lang-js">var value = $("#example-selector").val(); // get selector value</pre>
-                    </article>
+                         <h1>Setup</h1>
+                         <p>Setting up SuperToggle could not be simpler.</p>
+                         <p>Include the css and the library</p>
+                         <pre class="prettyprint lang-html">&lt;script type="text/javascript" src="supertoggle.js"&gt;&lt;/script&gt;</pre>
+                         <p>Create an button element to be the SuperToggle.</p>
+                         <pre class="prettyprint lang-html">&lt;button id="example-toggle"&gt;&lt;/button&gt;</pre>
+                         <p>Turn the element into a SuperToggle with some simple javascript</p>
+                         <pre class="prettyprint lang-js">$("#example-toggle").supertoggle();</pre>
+                     </article>
 
                     </div>
-
                     <div class="col-md-3" role="complementary">
                         <nav class="docs-sidebar hidden-print hidden-xs hidden-sm affix">
                             <ul class="nav docs-sidenav">
                                 <li><a href="#setup">Setup</a></li>
-                                <li><a href="#setting">Setting The Value</a></li>
-                                <li><a href="#getting">Getting The Value</a></li>
                             </ul>
                         </nav>
                     </div>

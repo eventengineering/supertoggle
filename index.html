@@ -113,7 +113,7 @@
 <header class="jumbotron">
   <div class="container">
     <h1>SuperToggle</h1>
-    <p>A JQuery UI enhancement of the standard HTML Select element</p>
+    <p>A simple Jquery UI toggle button</p>
     <p><a id="download" class="btn btn-primary btn-large" href="https://github.com/eventengineering/supertoggle/archive/master.zip"><span class='glyphicon glyphicon-cloud-download'></span> Download</a>
     </p>
     <p class="company" >
@@ -130,41 +130,32 @@
 
   <div class="row main-title">
    <div class="col-lg-12">
-    <h2>A Select Element and Much More....</h2>
+    <h2>Toggle Buttons with Attitude</h2>
   </div>
 </div>
 <div class="row">
  <div class="col-lg-12">
-  <p>SuperToggle is A JQuery UI enhancement of the standard HTML Select element.</p>
+  <p>SupertToggle lets you create customisable toggle buttons in seconds</p>
 
   <p>Simply include the library in your  project and you're away!</p>
 
-  <p><label style="width:170px;">Standard HTML Select: </label>
-    <select name="name" style="width:185px;">
-      <option value="first" selected>First Item</option>
-      <option value="second">Second Item</option>
-      <optgroup label="Group Title">
-        <option value="third">Third Item</option>
-        <option value="fourth" disabled>Disabled Item</option>
-        <option value="fifth">Fifth Item</option>
-        <option value="sixth">Sixth Item</option>
-      </optgroup>
-    </select></p>
-    <p>
-      <label style="width:170px;">Example SuperToggle: </label>
-      <input id="example-selector" name="name" type="text">
-    </p>
+  <p>
+    <button class="example plain"></button>
+    <button class="example simple"></button>
+    <button class="example like"></button>
+    <button class="example endis"></button>
+    <button class="example playpause"></button>
+    <button class="example switch"></button>
+  </p>
+</div>
 
-    <p>As well as giving you complete CSS control over your select elements, SuperToggle comes with a host of features to make manimupation your select elements as easy as possible.</p>
-  </div>
+<hr>
 
-  <hr>
-
-  <!-- Title -->
-  <div class="row">
-   <div class="col-lg-12">
-    <h2>Features</h2>
-  </div>
+<!-- Title -->
+<div class="row">
+ <div class="col-lg-12">
+  <h2>Features</h2>
+</div>
 </div>
 <!-- /.row -->
 
@@ -172,48 +163,48 @@
 <div class="row text-center">
 
  <div class="col-md-3 col-sm-6 feature">
-  <a href="docs#unit-length">
+  <a href="docs#options">
+   <div class="frame">
+    <i class="fa fa-power-off"></i>
+    <div class="caption">
+     <h3>Values</h3>
+     <p>Custom On/Off Values</p>
+   </div>
+ </div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#options">
+   <div class="frame">
+    <i class="fa fa-code"></i>
+    <div class="caption">
+     <h3>HTML</h3>
+     <p>Custom On/Off HTML content</p>
+   </div>
+ </div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 feature">
+  <a href="docs#options">
    <div class="frame">
     <i class="fa fa-css3"></i>
     <div class="caption">
-     <h3>CSS Styling</h3>
-     <p>Full CSS of all elements</p>
+     <h3>CSS</h3>
+     <p>Defined set of CSS classes</p>
    </div>
  </div>
 </a>
 </div>
 
 <div class="col-md-3 col-sm-6 feature">
-  <a href="docs#unit-area">
+  <a href="docs#options">
    <div class="frame">
-    <i class="fa fa-object-group"></i>
+    <i class="fa fa-terminal"></i>
     <div class="caption">
-     <h3>Grouping</h3>
-     <p>Group list elements togeather</p>
-   </div>
- </div>
-</a>
-</div>
-
-<div class="col-md-3 col-sm-6 feature">
-  <a href="docs#unit-volume">
-   <div class="frame">
-    <i class="fa fa-header"></i>
-    <div class="caption">
-     <h3>Headings</h3>
-     <p>List group headings</p>
-   </div>
- </div>
-</a>
-</div>
-
-<div class="col-md-3 col-sm-6 feature">
-  <a href="docs#unit-weight">
-   <div class="frame">
-    <i class="fa fa-ban"></i>
-    <div class="caption">
-     <h3>Disable</h3>
-     <p>Disable list elements</p>
+     <h3>Defaults</h3>
+     <p>Settable Default Values</p>
    </div>
  </div>
 </a>
@@ -221,36 +212,6 @@
 
 </div>
 
-<div class="row text-center">
-
-  <div class="col-md-3 col-sm-6 feature">
-  </div>
-
-  <div class="col-md-3 col-sm-6 feature">
-    <a href="docs#unit-speed">
-     <div class="frame">
-      <i class="fa fa-tasks"></i>
-      <div class="caption">
-       <h3>Getters/Setters</h3>
-       <p>Use jQuerym standard .val() function</p>
-     </div>
-   </div>
- </a>
-</div>
-
-<div class="col-md-3 col-sm-6 feature">
-  <a href="docs#unit-temperature">
-   <div class="frame">
-    <i class="fa fa-refresh"></i>
-    <div class="caption">
-     <h3>Easy Changes</h3>
-     <p>Easily Change list elements</p>
-   </div>
- </div>
-</a>
-</div>
-
-</div>
 <!-- /.row -->
 
 <hr>
@@ -267,7 +228,216 @@
 </div>
 <!-- /.container -->
 
+<style type="text/css">
 
+  .example{
+    margin-top:10px;
+    margin-right:20px;
+  }
+
+  .example.simple{
+    border:1px solid #333;
+    border-radius:5px;
+    color:#fff;
+    padding:2px 10px;
+  }
+  .example.simple.on{
+    background: #33ff41; /* Old browsers */
+    background: -moz-linear-gradient(top,  #33ff41 0%, #20a029 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #33ff41 0%,#20a029 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #33ff41 0%,#20a029 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ff41', endColorstr='#20a029',GradientType=0 ); /* IE6-9 */
+  }
+  .example.simple.off{
+    background: #ff3232; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
+  }
+
+  .example.like{
+    width:90px;
+    padding:0;
+    padding-left:5px;
+    border:2px solid #213BA5;
+    border-radius:5px;
+    text-align: left;
+    overflow: hidden;
+    position:relative;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+  }
+  .example.like div{
+    padding:3px 5px;
+    font-size: .8em;
+    vertical-align: middle;
+    box-sizing:border-box;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    border-left:1px solid #666;
+  }
+  .example.like.on{
+    color:#fff;
+    background: #365efe; /* Old browsers */
+    background: -moz-linear-gradient(top,  #365efe 0%, #213ba3 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #365efe 0%,#213ba3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #365efe 0%,#213ba3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+  }
+  .example.like.on div{
+    color:#213BA5;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+  }
+  .example.like.off{
+    color:#002CDC;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+  }
+  .example.like.off div{
+    color:#fff;
+    background: -webkit-linear-gradient(#365efe 0%, #213ba3 100%);
+    background: -o-linear-gradient(#365efe 0%, #213ba3 100%);
+    background: linear-gradient(#365efe 0%, #213ba3 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+  }
+
+  .example.endis{
+    width:100px;
+    padding:3px 5px;
+    border:2px solid #3C3C3C;
+    border-radius:5px;
+    font-size: .9em;
+    font-weight:bold;
+    text-align: left;
+    overflow: hidden;
+    position:relative;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+  }
+  .example.endis i{
+    font-weight: normal;
+    margin-right:5px;
+  }
+  .example.endis.on{
+    color: #00A508;
+  }
+  .example.endis.off{
+    color: #CA1B1B;
+  }
+
+  .example.playpause{
+    width:85px;
+    padding:3px 5px 3px 30px;
+    border:2px solid #3C3C3C;
+    border-radius:15px;
+    font-size: .9em;
+    font-weight:bold;
+    text-align: left;
+    position:relative;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+  }
+  .example.playpause i{
+    font-weight: normal;
+    margin-right:5px;
+    border:2px solid #3C3C3C;
+    border-radius:15px;
+    padding:7px 3px;
+    width:28px;
+    position:absolute;
+    top:-3px;
+    left:-3px;
+    bottom:-3px;
+    background: #cfcfcf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cfcfcf 0%, #848484 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #cfcfcf 0%,#848484 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #cfcfcf 0%,#848484 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#848484',GradientType=0 ); /* IE6-9 */
+  }
+  .example.playpause.on{
+    color: #00A508;
+  }
+  .example.playpause.off{
+    color: #CA1B1B;
+  }
+
+  .example.switch{
+    width:60px;
+    padding:3px 5px;
+    padding-left:8px;
+    border:2px solid #3C3C3C;
+    border-radius:15px;
+    font-size: .9em;
+    font-weight:bold;
+    overflow: hidden;
+    position:relative;
+    text-align: left;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+    color:#fff;
+  }
+  .example.switch div{
+    position: absolute;
+    top:-1px;
+    bottom:-1px;
+    border:2px solid #3C3C3C;
+    border-radius:15px;
+    width:26px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #b6b6b6 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#b6b6b6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #ffffff 0%,#b6b6b6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b6b6b6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  .example.switch.on{
+    color:#0E530E;
+    background: #13d837; /* Old browsers */
+    background: -moz-linear-gradient(top,  #13d837 0%, #1d8f24 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #13d837 0%,#1d8f24 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #13d837 0%,#1d8f24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13d837', endColorstr='#1d8f24',GradientType=0 ); /* IE6-9 */
+  }
+  .example.switch.on div{
+    right:-1px;
+    color:#33ff41;
+  }
+  .example.switch.off{
+    color:#5E0B0B;
+    padding-left:27px;
+    background: #ff3232; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
+  }
+  .example.switch.off div{
+    left:-1px;
+  }
+</style>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
@@ -287,21 +457,49 @@
     offset: 40
   });
 
-  $("#example-selector").supertoggle({
-    items:[
-    {value:"first", title:"First Item"},
-    {value:"second", title:"Second Item"},
-    {type:"title", title:"Group Title"},
-    {value:"third", title:"Third Item"},
-    {value:"fourth", title:"Disabled Item", disabled:true},
-    {value:"fifth", title:"Fifth Item"},
-    {type:"seperator"},
-    {value:"sixth", title:"Sixth Item"},
-    ],
-  })
+  //plain toggle
+  $(".example.plain").supertoggle();
 
-  $("#example-selector").val("first");
+  //on/off toggle
+  $(".example.simple").supertoggle({
+    onVal: "on",
+    onContent: "on",
+    offVal: "off",
+    offContent: "off",
+  });
 
+  //like toggle
+  $(".example.like").supertoggle({
+    onVal: true,
+    onContent: "Liked <div><i class='fa fa-thumbs-up'></i></div>",
+    offVal: false,
+    offContent: "Like <div><i class='fa fa-thumbs-up'></i></div>",
+  });
+
+  //enable/disable toggle
+  $(".example.endis").supertoggle({
+    onVal: 1,
+    onContent: "<i class='fa fa-circle'></i> Enabled",
+    offVal: 0,
+    offContent: "<i class='fa fa-circle'></i> Disabled",
+    defaultState: true,
+  });
+
+  //play/pause toggle
+  $(".example.playpause").supertoggle({
+    onVal: "play",
+    onContent: "<i class='fa fa-play fa-fw'></i> Play",
+    offVal: "pause",
+    offContent: "<i class='fa fa-pause fa-fw'></i> Pause",
+  });
+
+  //switch toggle
+  $(".example.switch").supertoggle({
+    onVal: true,
+    onContent: "<div></div>On",
+    offVal: false,
+    offContent: "Off<div></div>",
+  });
   // $("#github-link").click(function(){
   //     ga('send', 'event', {
   //         eventCategory: 'Github Link',

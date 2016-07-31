@@ -8,28 +8,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SuperSelector</title>
+    <title>SuperToggle</title>
     <meta name="description" content="A JQuery UI enhancement of the standard HTML Select element.">
     <meta name="author" content="Event Engineering">
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="SuperSelector">
+    <meta itemprop="name" content="SuperToggle">
     <meta itemprop="description" content="A JQuery UI enhancement of the standard HTML Select element.">
-    <meta itemprop="image" content="http://eventengineering.github.io/superselector/images/icon.jpg">
+    <meta itemprop="image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
 
 
-    <meta name="twitter:title" content="SuperSelector" />
+    <meta name="twitter:title" content="SuperToggle" />
     <meta name="twitter:description" content="A JQuery UI enhancement of the standard HTML Select element." />
-    <meta name="twitter:image" content="https://eventengineering.github.io/superselector/images/icon.jpg" />
+    <meta name="twitter:image" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
 
 
-    <meta property="og:title" content="SuperSelector" />
+    <meta property="og:title" content="SuperToggle" />
     <meta property="og:description" content="A JQuery UI enhancement of the standard HTML Select element." />
-    <meta property="og:image" content="http://eventengineering.github.io/superselector/images/icon.jpg"/>
-    <meta property="og:image:secure_url" content="https://eventengineering.github.io/superselector/images/icon.jpg" />
+    <meta property="og:image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg"/>
+    <meta property="og:image:secure_url" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
 
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -42,7 +42,7 @@
 
     <!-- Custom CSS -->
     <link href="../css/styles.css" rel="stylesheet">
-    <link href="../css/superselector.css" rel="stylesheet">
+
 
     <!-- Pretty Print CSS -->
     <link href="../css/prettyprint.css" rel="stylesheet">
@@ -73,7 +73,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../"><img src="../images/white_small.png">SuperSelector</a>
+                    <a class="navbar-brand" href="../"><img src="../images/white_small.png">SuperToggle</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -100,7 +100,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden-sm">
-                            <a id="github-link" href="https://github.com/eventengineering/superselector">Github</a>
+                            <a id="github-link" href="https://github.com/eventengineering/supertoggle">Github</a>
                         </li>
                         <li>
                             <a id="eventeng-link" href="http://www.event.engineering" title="Visit the Event Engineering company website">Event Engineering</a>
@@ -123,146 +123,44 @@
                     <a class="anchor" id="setup"></a>
                     <article>
                         <h1>Setup</h1>
-                        <p>Setting up superselector could not be simpler.</p>
+                        <p>Setting up SuperToggle could not be simpler.</p>
                         <p>Include the css and the library</p>
-                        <pre class="prettyprint lang-html"> &lt;link rel="stylesheet" href="superselector.min.css"&gt;
- &lt;script type="text/javascript" src="superselector.js"&gt;  &lt;/script&gt; </pre>
-
-                        <p>Create an input element to be the SuperSelctor.</p>
-                        <pre class="prettyprint lang-html">&lt;div id="example-selector"&gt&lt;/div&gt</pre>
-
-                        <p>Turn the element into a superselector with some simple javascript</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").superselector({
-    items:[ //array of items for the SuperSelector
-        {value:"first", title:"First Item"},
-        {value:"second", title:"Second Item"},
-    ]
+                        <pre class="prettyprint lang-html">&lt;script type="text/javascript" src="supertoggle.js"&gt;&lt;/script&gt;</pre>
+                        <p>Create an button element to be the SuperToggle.</p>
+                        <pre class="prettyprint lang-html">&lt;button id="example-toggle"&gt;&lt;/button&gt;</pre>
+                        <p>Turn the element into a SuperToggle with some simple javascript</p>
+                        <pre class="prettyprint lang-js">$("#example-toggle").supertoggle();</pre>
+                    </article>
+                    <a class="anchor" id="options"></a>
+                    <article>
+                        <h1>Setup Options</h1>
+                        <p>There are a few simple setup options for SuperToggle.</p>
+                        <pre class="prettyprint lang-js">$("#example-toggle").supertoggle({
+    onVal: true,
+    onContent: "On",
+    offVal: false,
+    offContent: "Off",
+    defaultState: true,
 });</pre>
-                    </article>
-                    <a class="anchor" id="definition"></a>
-                    <article>
-                        <h1>Defining Items List</h1>
-                        <p>When you create your SuperSelector, you can define the items to be chosen from the selection list in the <span class='param'>items</span> array.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").superselector({
-    items:[
-        {value:"first", title:"First Item"},
-        {value:"second", title:"Second Item"},
-        {type:"title", title:"Group Title"},
-        {value:"third", title:"Third Item"},
-        {value:"fourth", title:"Disabled Item", disabled:true},
-        {value:"fifth", title:"Fifth Item"},
-        {type:"seperator"},
-        {value:"sixth", title:"Sixth Item"},
-    ],
-})</pre>
-                        <p>Each item in the array is an object containing info for each line item.</p>
+                        <h3>onVal</h3>
+                        <p>This parameter stores the value you want the SuperToggle to show when it is in its <span class='param'>on</span> state. (default:<span class='param'>true</span>)</p>
 
-                        <h2>Item Types</h2>
-                        <p>There are three types of line item available in the Superselector.</p>
+                        <h3>onContent</h3>
+                        <p>This parameter stores HTML content of the SuperToggle in its <span class='param'>on</span> state. This can be either text or full HTML. (default:"On")</p>
 
-                        <h3>Standard Item</h3>
-                        <p>A standard item defines the <span class='param'>value</span> to be returned when the item is selected and the <span class='param'>title</span> to be displayed for that item.</p>
-                        <pre class="prettyprint lang-js">{value:"first", title:"First Item"},</pre>
+                        <h3>offVal</h3>
+                        <p>This parameter stores the value you want the SuperToggle to show when it is in its <span class='param'>off</span> state. (default:<span class='param'>false</span>)</p>
 
-                        <p>There is an optional <span class='param'>disabled</span> paramater to set the item to be disabled. in this state it appears greyed out in the list and cannot be selected.</p>
-                        <pre class="prettyprint lang-js">{value:"fourth", title:"Disabled Item", disabled:true},</pre>
+                        <h3>offContent</h3>
+                        <p>This parameter stores HTML content of the SuperToggle in its <span class='param'>off</span> state. This can be either text or full HTML. (default:"Off")</p>
 
-                        <h3>Title Item</h3>
-                        <p>A title item will show up in bold in the list with a darker background and a bigger font. a title item cannot be selected</p>
-                        <pre class="prettyprint lang-js">{type:"title", title:"Group Title"},</pre>
-
-                        <h3>Seperator Item</h3>
-                        <p>A seperator item appears as a horizontal line in the list.</p>
-                        <pre class="prettyprint lang-js">{type:"seperator"},</pre>
-                    </article>
-                    <a class="anchor" id="setting"></a>
-                    <article>
-                        <h1>Setting The Value</h1>
-                        <p>The value of a SuperSelector can be set using the standard jquery <span class='param'>val()</span> function.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").val("first"); // set selector to value of "first"</pre>
-                        <p>If the set value is not in the list, then it is displayed in the input box as the value rather than a specified title.</p>
-
-                        <p>If you wish to set the SuperSelector to a value not in the list, and display a seperate title then you can set the value with an item object instead.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").val({value:"unlisted_value", title:"Unlisted Value"}); //set the SuperSelectors value to one that isnt in the list, and display a custom title for it.</pre>
-                    </article>
-                    <a class="anchor" id="getting"></a>
-                    <article>
-                        <h1>Getting The Value</h1>
-                        <p>The value of a SuperSelector can be read using the standard jQuery <span class='param'>val()</span> function.</p>
-                        <pre class="prettyprint lang-js">var value = $("#example-selector").val(); // get selector value</pre>
-                    </article>
-                    <a class="anchor" id="manipulation"></a>
-                    <article>
-                        <h1>Manipulating List Items</h1>
-                        <p>Once your super selector has been created it is possible to change the items in the list using a variety of functions.</p>
-
-                        <h2>Disable/Enable Item</h2>
-                        <p>To enable or disable an item, use the <span class='param'>disableItem</span> function. The first argumnet should be the value of the item to be changed. The second argument is wheather the element is to be disabled (<span class='param'>true</span>) or enabled (<span class='param'>param</span>).</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").tabulator("disableItem","first", true); //Disable the first item in the list using the items value;</pre>
-                        <p>You can also pass the object representing the item instead of its value.</p>
-                        <pre class="prettyprint lang-js">var firstItem = {value:"first", title:"First Item"};
-$("#example-selector").tabulator("disableItem",firstItem, false); //Enable the first item in the list using the items object;</pre>
-
-                        <h2>Remove Item</h2>
-                        <p>To remove an item from the list, use the removeItem function, passing items value.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").tabulator("removeItem","first"); //Remove the first item in the list using the items value;</pre>
-                        <p>You can also pass the object representing the item instead of its value.</p>
-                        <pre class="prettyprint lang-js">var firstItem = {value:"first", title:"First Item"};
-$("#example-selector").tabulator("removeItem",firstItem); //Remove the first item in the list using the items object;</pre>
-
-                        <h2>Replace Item</h2>
-                        <p>To replace an item, use the <span class='param'>replaceItem</span> function. The first argumnet should be the item to be replaced, this should either be the value of the item, or an object of the items definition. The second should be an object representing the new value.</p>
-                        <pre class="prettyprint lang-js">var newItem = {value:"new", title:"New Item"};
-$("#example-selector").tabulator("replaceItem","first", newItem); //Replace the first item in the list using the items value, with the newItem object;</pre>
-                        <pre class="prettyprint lang-js">var firstItem = {value:"first", title:"First Item"};
-var newItem = {value:"new", title:"New Item"};
-$("#example-selector").tabulator("replaceItem",firstItem, newItem); //Replace the first item in the list using the items object, with the newItem object;</pre>
-
-                        <h2>Add Item</h2>
-                        <p>To and an item to the end of the list, use the <span class='param'>addItem</span> function. The first argument is the new items object.</p>
-                        <pre class="prettyprint lang-js">var newItem = {value:"new", title:"New Item"};
-$("#example-selector").tabulator("addItem", newItem); //Add the new item to the end off the list;</pre>
-
-                        <h2>Insert Item</h2>
-                        <p>To replace an item, use the <span class='param'>insertItem</span> function. The first argumnet should be the item to be that you want to insert the item next to, this should either be the value of the item, or an object of the items definition. The second should be an object representing the new value. The third argument is a boolean value representing weather the new item is to be isnerted before (true) or after (false) the specified first item</p>
-                        <pre class="prettyprint lang-js">var newItem = {value:"new", title:"New Item"};
-$("#example-selector").tabulator("replaceItem","first", newItem, true); //Insert the new item before the first item in the list;</pre>
-
-                        <h2>Get Item From value</h2>
-                        <p>To get the object of an item based on its value, use the <span class='param'>getItem</span> function. pass the value of the item to the function and it will return the object representing the item.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").tabulator("getItems"); //Returns and array of objets for all items in the list;</pre>
-                        <p>The function will return false if no item with a matching value is found.</p>
-
-                        <h2>Get All Items</h2>
-                        <p>To get the objects for all items in a SuperSelector, use the <span class='param'>getItems</span> function.</p>
-                        <pre class="prettyprint lang-js">$("#example-selector").tabulator("getItems"); //Returns and array of objets for all items in the list;</pre>
-                        <p>Example Returned List:</p>
-                        <pre class="prettyprint lang-js">[
-    {value:"first", title:"First Item"},
-    {value:"second", title:"Second Item"},
-    {type:"title", title:"Group Title"},
-    {value:"third", title:"Third Item"},
-    {value:"fourth", title:"Disabled Item", disabled:true},
-    {value:"fifth", title:"Fifth Item"},
-    {type:"seperator"},
-    {value:"sixth", title:"Sixth Item"},
-]</pre>
-
-                        <h2>Set New Items List</h2>
-                        <p>To set a completly new list in the SuperSelector, use the <span class='param'>setItems</span> function, passing an array of new item objects.</p>
-                        <pre class="prettyprint lang-js">var newItems = items:[
-    {value:"newFirst", title:"1st Item"},
-    {value:"newSecond", title:"Second Item"},
-    {value:"newThird", title:"3rd Item"},
-];
-
-$("#example-selector").tabulator("setItems", newItems); //clear the old list and add a new list;</pre>
+                        <h3>defaultState</h3>
+                        <p>This parameter sets the value you want the SuperToggle to have when it is first created. (default:<span class='param'>true</span>)</p>
                     </article>
                     <a class="anchor" id="css"></a>
                     <article>
-                        <h1>CSS Clases</h1>
-                        <p>SuperSelector elements are assigned a range of CSS classes to make it easier for you to manipulate the look, feel and function of the selector.</p>
-
+                        <h1>CSS Classes</h1>
+                        <p>SuperToggle elements are assigned a range of CSS classes to make it easier for you to manipulate the look, feel and function of the toggle.</p>
                         <table>
                             <thead>
                                 <th>Class</th>
@@ -270,32 +168,21 @@ $("#example-selector").tabulator("setItems", newItems); //clear the old list and
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>superselector-wrapper</td>
-                                    <td>A wrapper round the input element to contain the carret icon</td>
+                                    <td>supertoggle</td>
+                                    <td>The button element that is the SuperToggle</td>
                                 </tr>
+
                                 <tr>
-                                    <td>superselector</td>
-                                    <td>The input element that is the SuperSelector</td>
+                                    <td>on</td>
+                                    <td>Assigned to the toggle in its <span class='param'>on</span> state</td>
                                 </tr>
+
                                 <tr>
-                                    <td>superselector-list</td>
-                                    <td>The value lookup list</td>
-                                </tr>
-                                <tr>
-                                    <td>choice</td>
-                                    <td>A standard item in the lookup list</td>
-                                </tr>
-                                <tr>
-                                    <td>seperator</td>
-                                    <td>A seperator item in the lookup list</td>
-                                </tr>
-                                <tr>
-                                    <td>title</td>
-                                    <td>A title item in the lookup list</td>
+                                    <td>off</td>
+                                    <td>Assigned to the toggle in its <span class='param'>off</span> state</td>
                                 </tr>
                             </tbody>
                         </table>
-
                     </article>
                 </div>
 
@@ -303,10 +190,7 @@ $("#example-selector").tabulator("setItems", newItems); //clear the old list and
                     <nav class="docs-sidebar hidden-print hidden-xs hidden-sm affix">
                         <ul class="nav docs-sidenav">
                             <li><a href="#setup">Setup</a></li>
-                            <li><a href="#definition">Defining Items List</a></li>
-                            <li><a href="#setting">Setting The Value</a></li>
-                            <li><a href="#getting">Getting The Value</a></li>
-                            <li><a href="#manipulation">Manipulating List Items</a></li>
+                            <li><a href="#definition">Setup Options</a></li>
                             <li><a href="#css">CSS Classes</a></li>
                         </ul>
                     </nav>
@@ -338,7 +222,7 @@ $("#example-selector").tabulator("setItems", newItems); //clear the old list and
         <!-- Bootstrap Core JavaScript -->
         <script src="../js/bootstrap.min.js"></script>
 
-        <script src="../js/superselector.js"></script>
+        <script src="../js/supertoggle.js"></script>
 
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?style=desert"></script>
 

@@ -8,26 +8,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SuperSelector</title>
+    <title>SuperToggle</title>
     <meta name="description" content="A JQuery UI enhancement of the standard HTML Select element.">
     <meta name="author" content="Event Engineering">
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="SuperSelector">
+    <meta itemprop="name" content="SuperToggle">
     <meta itemprop="description" content="A JQuery UI enhancement of the standard HTML Select element.">
-    <meta itemprop="image" content="http://eventengineering.github.io/superselector/images/icon.jpg">
+    <meta itemprop="image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="SuperSelector" />
+    <meta name="twitter:title" content="SuperToggle" />
     <meta name="twitter:description" content="A JQuery UI enhancement of the standard HTML Select element." />
-    <meta name="twitter:image" content="https://eventengineering.github.io/superselector/images/icon.jpg" />
+    <meta name="twitter:image" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
 
 
-    <meta property="og:title" content="SuperSelector" />
+    <meta property="og:title" content="SuperToggle" />
     <meta property="og:description" content="A JQuery UI enhancement of the standard HTML Select element." />
-    <meta property="og:image" content="http://eventengineering.github.io/superselector/images/icon.jpg"/>
-    <meta property="og:image:secure_url" content="https://eventengineering.github.io/superselector/images/icon.jpg" />
+    <meta property="og:image" content="http://eventengineering.github.io/supertoggle/images/icon.jpg"/>
+    <meta property="og:image:secure_url" content="https://eventengineering.github.io/supertoggle/images/icon.jpg" />
 
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -40,7 +40,7 @@
 
     <!-- Custom CSS -->
     <link href="../css/styles.css" rel="stylesheet">
-    <link href="../css/superselector.css" rel="stylesheet">
+
 
     <!-- Pretty Print CSS -->
     <link href="../css/prettyprint.css" rel="stylesheet">
@@ -70,7 +70,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../"><img src="../images/white_small.png">SuperSelector</a>
+                    <a class="navbar-brand" href="../"><img src="../images/white_small.png">SuperToggle</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -97,7 +97,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden-sm">
-                            <a id="github-link" href="https://github.com/eventengineering/superselector">Github</a>
+                            <a id="github-link" href="https://github.com/eventengineering/supertoggle">Github</a>
                         </li>
                         <li>
                             <a id="eventeng-link" href="http://www.event.engineering" title="Visit the Event Engineering company website">Event Engineering</a>
@@ -117,101 +117,283 @@
             <div class="row">
 
                 <div class="col-md-9 col-xs-12 content" role="main">
-                    <a class="anchor" id="basic"></a>
+                    <a class="anchor" id="plain"></a>
                     <article>
-                        <h1>Basic SuperSelector</h1>
-                        <p>This is a basic SuperSelector that uses a standard configuration</p>
-                        <p><label>Example SuperSelector: </label> <input id="example-basic" name="name" type="text"></p>
-                    </article>
-
-                    <a class="anchor" id="manipulation"></a>
-                    <article>
-                        <h1>List Manipulation</h1>
-                        <p>Use the controls below to test each of the SuperSeletor Functions</p>
-
+                        <h1>Plain Toggle</h1>
+                        <p>An unstyled toggle button.</p>
                         <p>
-
-                            <h2>Set Value</h2>
-                            <input id="set" type="button" value="Set Value to 'Second Item'">
-                            <input id="set-unlisted" type="button" value="Set Value to item not in the list">
-                            <input id="set-unlisted-title" type="button" value="Set Value to item not in the list, with custom title">
-
-                            <h2>Get Value</h2>
-                            <input id="get" type="button" value="Get SuperSelector Value">
-
-                            <h2>Manipulate List</h2>
-                            <input id="disable" type="button" value="Disable Third Item">
-                            <input id="remove" type="button" value="Remove Fourth Item">
-                            <input id="replace" type="button" value="Replace Fifth Item">
-                            <input id="add" type="button" value="Add New Item">
-                            <input id="insert" type="button" value="Insert Item Before Sixth Item">
-                            <input id="reset" type="button" value="Reset SuperSelector" style="margin-bottom:0;">
-
+                            <button class="example plain"></button>
                         </p>
-
-                        <p><label>Example SuperSelector: </label> <input id="example-manipulation" name="name" type="text"></p>
                     </article>
-
-                    <a class="anchor"></a>
 
                     <style type="text/css">
-
-                        /*style select box*/
-                        #example-styling{
-                            border:1px solid #000;
-                            background-color:#333;
+                        .example.simple{
+                            border:1px solid #333;
+                            border-radius:5px;
                             color:#fff;
+                            padding:2px 10px;
                         }
-
-                        /*style down caret*/
-                        .superselector-wrapper[data-listid=example-styling]::after{
-                            border-top-color: #fff;
+                        .example.simple.on{
+                            background: #33ff41; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #33ff41 0%, #20a029 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #33ff41 0%,#20a029 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #33ff41 0%,#20a029 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ff41', endColorstr='#20a029',GradientType=0 ); /* IE6-9 */
                         }
-
-                        /*style list*/
-                        .superselector-list[data-listid=example-styling]{
-                            background:#666;
-                            color: #fff;
+                        .example.simple.off{
+                            background: #ff3232; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
                         }
-
-                        /*style seperator items*/
-                        .superselector-list[data-listid=example-styling] ul li.seperator{
-                            border-top:1px solid #999;
-                        }
-
-                        /*style title items*/
-                        .superselector-list[data-listid=example-styling] ul li.title{
-                            background: #333;
-                            border-top:1px solid #999;
-                            border-bottom:1px solid #999;
-                        }
-
-                        /*style disabled items*/
-                        .superselector-list[data-listid=example-styling] ul li.choice.disabled{
-                            color: #333;
-                        }
-
-                        /*style hover over items*/
-                        .superselector-list[data-listid=example-styling] ul li.choice.active{
-                            background-color: #7E3131!important;
-                            color: #fff
-                        }
-
                     </style>
 
-                    <article style="padding-bottom:50px;" class="styler">
-                        <h1>Custom Styling</h1>
-                        <p>This example shows the range of styling you can apply through CSS.</p>
-                        <p><label>Example SuperSelector: </label> <input id="example-styling" name="name" type="text"></p>
+                    <a class="anchor" id="simple"></a>
+                    <article>
+                        <h1>On/Off Toggle</h1>
+                        <p>A basically styled on/off toggle button.</p>
+                        <p>
+                            <button class="example simple"></button>
+                        </p>
+                    </article>
+
+                    <style type="text/css">
+                        .example.like{
+                            width:90px;
+                            padding:0;
+                            padding-left:5px;
+                            border:2px solid #213BA5;
+                            border-radius:5px;
+                            text-align: left;
+                            overflow: hidden;
+                            position:relative;
+                            -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                        }
+                        .example.like div{
+                            padding:3px 5px;
+                            font-size: .8em;
+                            vertical-align: middle;
+                            box-sizing:border-box;
+                            position:absolute;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            border-left:1px solid #666;
+                        }
+                        .example.like.on{
+                            color:#fff;
+                            background: #365efe; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #365efe 0%, #213ba3 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #365efe 0%,#213ba3 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #365efe 0%,#213ba3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.like.on div{
+                            color:#213BA5;
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.like.off{
+                            color:#002CDC;
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.like.off div{
+                            color:#fff;
+                            background: -webkit-linear-gradient(#365efe 0%, #213ba3 100%);
+                            background: -o-linear-gradient(#365efe 0%, #213ba3 100%);
+                            background: linear-gradient(#365efe 0%, #213ba3 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365efe', endColorstr='#213ba3',GradientType=0 ); /* IE6-9 */
+                        }
+                    </style>
+
+                    <a class="anchor" id="like"></a>
+                    <article>
+                        <h1>Like Toggle</h1>
+                        <p>A Facebook style like toggle.</p>
+                        <p>
+                            <button class="example like"></button>
+                        </p>
+                    </article>
+
+                    <style type="text/css">
+                        .example.endis{
+                            width:100px;
+                            padding:3px 5px;
+                            border:2px solid #3C3C3C;
+                            border-radius:5px;
+                            font-size: .9em;
+                            font-weight:bold;
+                            text-align: left;
+                            overflow: hidden;
+                            position:relative;
+                            -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.endis i{
+                            font-weight: normal;
+                            margin-right:5px;
+                        }
+                        .example.endis.on{
+                            color: #00A508;
+                        }
+                        .example.endis.off{
+                            color: #CA1B1B;
+                        }
+                    </style>
+
+                    <a class="anchor" id="endis"></a>
+                    <article>
+                        <h1>Enable/Disable Toggle</h1>
+                        <p>An Enable / Disable toggle button.</p>
+                        <p>
+                            <button class="example endis"></button>
+                        </p>
+                    </article>
+
+                    <style type="text/css">
+                        .example.playpause{
+                            width:85px;
+                            padding:3px 5px 3px 30px;
+                            border:2px solid #3C3C3C;
+                            border-radius:15px;
+                            font-size: .9em;
+                            font-weight:bold;
+                            text-align: left;
+                            position:relative;
+                            -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.playpause i{
+                            font-weight: normal;
+                            margin-right:5px;
+                            border:2px solid #3C3C3C;
+                            border-radius:15px;
+                            padding:7px 3px;
+                            width:28px;
+                            position:absolute;
+                            top:-3px;
+                            left:-3px;
+                            bottom:-3px;
+                            background: #cfcfcf; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #cfcfcf 0%, #848484 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #cfcfcf 0%,#848484 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #cfcfcf 0%,#848484 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#848484',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.playpause.on{
+                            color: #00A508;
+                        }
+                        .example.playpause.off{
+                            color: #CA1B1B;
+                        }
+                    </style>
+
+                    <a class="anchor" id="playpause"></a>
+                    <article>
+                        <h1>Play/Pause Toggle</h1>
+                        <p>A play/pause control toggle button.</p>
+                        <p>
+                            <button class="example playpause"></button>
+                        </p>
+                    </article>
+
+                    <style type="text/css">
+                        .example.switch{
+                            width:60px;
+                            padding:3px 5px;
+                            padding-left:8px;
+                            border:2px solid #3C3C3C;
+                            border-radius:15px;
+                            font-size: .9em;
+                            font-weight:bold;
+                            overflow: hidden;
+                            position:relative;
+                            text-align: left;
+                            -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
+                            color:#fff;
+                        }
+                        .example.switch div{
+                            position: absolute;
+                            top:-1px;
+                            bottom:-1px;
+                            border:2px solid #3C3C3C;
+                            border-radius:15px;
+                            width:26px;
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #b6b6b6 100%); /* FF3.6-15 */
+                            background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#b6b6b6 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: radial-gradient(ellipse at center,  #ffffff 0%,#b6b6b6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b6b6b6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                        }
+                        .example.switch.on{
+                            color:#0E530E;
+                            background: #13d837; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #13d837 0%, #1d8f24 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #13d837 0%,#1d8f24 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #13d837 0%,#1d8f24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13d837', endColorstr='#1d8f24',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.switch.on div{
+                            right:-1px;
+                            color:#33ff41;
+                        }
+                        .example.switch.off{
+                            color:#5E0B0B;
+                            padding-left:27px;
+                            background: #ff3232; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ff3232 0%, #a02020 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ff3232 0%,#a02020 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ff3232 0%,#a02020 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#a02020',GradientType=0 ); /* IE6-9 */
+                        }
+                        .example.switch.off div{
+                            left:-1px;
+                        }
+                    </style>
+
+                    <a class="anchor" id="switch"></a>
+                    <article>
+                        <h1>Switch Toggle</h1>
+                        <p>A Switch style toggle button.</p>
+                        <p>
+                            <button class="example switch"></button>
+                        </p>
                     </article>
                 </div>
 
                 <div class="col-md-3" role="complementary">
                     <nav class="docs-sidebar hidden-print hidden-xs hidden-sm affix">
                         <ul class="nav docs-sidenav">
-                            <li><a href="#basic">Basic SuperSelector</a></li>
-                            <li><a href="#manipulation">List Manipulation</a></li>
-                            <li><a href="#styling">Custom Styling</a></li>
+                            <li><a href="#plain">Plain Toggle</a></li>
+                            <li><a href="#simple">On/Off Toggle</a></li>
+                            <li><a href="#like">Like Toggle</a></li>
+                            <li><a href="#endis">Enable/Disable Toggle</a></li>
+                            <li><a href="#playpause">Play/Pause Toggle</a></li>
+                            <li><a href="#switch">Switch Toggle</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -242,7 +424,7 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="../js/bootstrap.min.js"></script>
 
-        <script src="../js/superselector.js"></script>
+        <script src="../js/supertoggle.js"></script>
 
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?style=desert"></script>
 
@@ -254,114 +436,63 @@
             });
 
 
-                // $("#github-link").click(function(){
-                //     ga('send', 'event', {
-                //         eventCategory: 'Github Link',
-                //         eventAction: 'click',
-                //         eventLabel: 'Github Link',
-                //         transport: 'beacon'
-                //       })
-                // });
+            // $("#github-link").click(function(){
+            //     ga('send', 'event', {
+            //         eventCategory: 'Github Link',
+            //         eventAction: 'click',
+            //         eventLabel: 'Github Link',
+            //         transport: 'beacon'
+            //       })
+            // });
 
 
-                ////////////// Selector Definitions //////////////
+            ////////////// Toggle Definitions //////////////
 
-                $("#example-basic").superselector({
-                    items:[
-                    {value:"first", title:"First Item"},
-                    {value:"second", title:"Second Item"},
-                    {type:"title", title:"Group Title"},
-                    {value:"third", title:"Third Item"},
-                    {value:"fourth", title:"Disabled Item", disabled:true},
-                    {value:"fifth", title:"Fifth Item"},
-                    {type:"seperator"},
-                    {value:"sixth", title:"Sixth Item"},
-                    ],
-                });
+            //plain toggle
+            $(".example.plain").supertoggle();
 
-                $("#example-basic").val("first");
+            //on/off toggle
+            $(".example.simple").supertoggle({
+                onVal: "on",
+                onContent: "on",
+                offVal: "off",
+                offContent: "off",
+            });
 
-                $("#example-manipulation").superselector({
-                    items:[
-                    {value:"first", title:"First Item"},
-                    {value:"second", title:"Second Item"},
-                    {type:"title", title:"Group Title"},
-                    {value:"third", title:"Third Item"},
-                    {value:"fourth", title:"Disabled Item", disabled:true},
-                    {value:"fifth", title:"Fifth Item"},
-                    {type:"seperator"},
-                    {value:"sixth", title:"Sixth Item"},
-                    ],
-                })
+            //like toggle
+            $(".example.like").supertoggle({
+                onVal: true,
+                onContent: "Liked <div><i class='fa fa-thumbs-up'></i></div>",
+                offVal: false,
+                offContent: "Like <div><i class='fa fa-thumbs-up'></i></div>",
+            });
 
-                $("#example-manipulation").val("first");
+            //enable/disable toggle
+            $(".example.endis").supertoggle({
+                onVal: 1,
+                onContent: "<i class='fa fa-circle'></i> Enabled",
+                offVal: 0,
+                offContent: "<i class='fa fa-circle'></i> Disabled",
+                defaultState: true,
+            });
 
-                $("#set").click(function(){
-                    $("#example-manipulation").val("second");
-                });
+            //play/pause toggle
+            $(".example.playpause").supertoggle({
+                onVal: "play",
+                onContent: "<i class='fa fa-play fa-fw'></i> Play",
+                offVal: "pause",
+                offContent: "<i class='fa fa-pause fa-fw'></i> Pause",
+            });
 
-                $("#set-unlisted").click(function(){
-                    $("#example-manipulation").val("bob");
-                });
+            //switch toggle
+            $(".example.switch").supertoggle({
+                onVal: true,
+                onContent: "<div></div>On",
+                offVal: false,
+                offContent: "Off<div></div>",
+            });
+        </script>
 
-                $("#set-unlisted-title").click(function(){
-                    $("#example-manipulation").val({value:"bob", title:"Unlisted Item"});
-                });
+    </body>
 
-                $("#get").click(function(){
-                    alert("Super Selector Value: " + $("#example-manipulation").val());
-                });
-
-                $("#disable").click(function(){
-                    $("#example-manipulation").superselector("disableItem", "third", true);
-                });
-
-                $("#remove").click(function(){
-                    $("#example-manipulation").superselector("removeItem", "fourth", true);
-                });
-
-                $("#replace").click(function(){
-                    $("#example-manipulation").superselector("replaceItem", "fifth", {value:"replacement", title:"Replacement Item"});
-                });
-
-                $("#add").click(function(){
-                    $("#example-manipulation").superselector("addItem", {value:"added", title:"Added Item"});
-                });
-
-                $("#insert").click(function(){
-                    $("#example-manipulation").superselector("insertItem", "sixth", {value:"inserted", title:"Inserted Item"}, true);
-                });
-
-                $("#reset").click(function(){
-                    $("#example-manipulation").superselector("setItems", [
-                        {value:"first", title:"First Item"},
-                        {value:"second", title:"Second Item"},
-                        {type:"title", title:"Group Title"},
-                        {value:"third", title:"Third Item"},
-                        {value:"fourth", title:"Disabled Item", disabled:true},
-                        {value:"fifth", title:"Fifth Item"},
-                        {type:"seperator"},
-                        {value:"sixth", title:"Sixth Item"},
-                        ]);
-                });
-
-                $("#example-styling").superselector({
-                    items:[
-                    {value:"first", title:"First Item"},
-                    {value:"second", title:"Second Item"},
-                    {type:"title", title:"Group Title"},
-                    {value:"third", title:"Third Item"},
-                    {value:"fourth", title:"Disabled Item", disabled:true},
-                    {value:"fifth", title:"Fifth Item"},
-                    {type:"seperator"},
-                    {value:"sixth", title:"Sixth Item"},
-                    ],
-                });
-
-                $("#example-styling").val("first");
-
-            </script>
-
-        </body>
-
-        </html>
+    </html>
